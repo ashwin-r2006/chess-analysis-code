@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FEN Generator for Lichess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Chess Position Generator (Accessible)</h1>
+
+<form id="fenForm">
+
+    <label>
+        Side to move:
+        <select id="move" required>
+            <option value="" selected disabled>Select side</option>
+            <option value="1">White</option>
+            <option value="2">Black</option>
+        </select>
+    </label> 
+<label>Enter coordinates of all pieces </label>
+<label> This form will display error if there is more or less than 1 king present for both colours</label>
+    <label>
+        White King:
+        <input type="text" id="kw">
+    </label>
+
+    <label>
+        Black King:
+        <input type="text" id="kb">
+    </label>
+
+    <label>
+        White Queens:
+        <input type="text" id="qw">
+    </label>
+
+    <label>
+        Black Queens:
+        <input type="text" id="qb">
+    </label>
+
+    <label>
+        White Bishops:
+        <input type="text" id="bw">
+    </label>
+
+    <label>
+        Black Bishops:
+        <input type="text" id="bb">
+    </label>
+
+    <label>
+        White Knights:
+        <input type="text" id="nw">
+    </label>
+
+    <label>
+        Black Knights:
+        <input type="text" id="nb">
+    </label>
+
+    <label>
+        White Rooks:
+        <input type="text" id="rw">
+    </label>
+
+    <label>
+        Black Rooks:
+        <input type="text" id="rb">
+    </label>
+
+    <label>
+        White Pawns:
+        <input type="text" id="pw">
+    </label>
+
+    <label>
+        Black Pawns:
+        <input type="text" id="pb">
+    </label>
+
+    <fieldset>
+        <legend>Castling Rights</legend>
+        <label>
+            <input type="checkbox" id="K"> White King side
+        </label>
+        <label>
+            <input type="checkbox" id="Q"> White Queen side
+        </label>
+        <label>
+            <input type="checkbox" id="k"> Black King side
+        </label>
+        <label>
+            <input type="checkbox" id="q"> Black Queen side
+        </label>
+    </fieldset>
+
+    <button type="submit">Generate FEN</button>
+
+</form>
+
+<h2>Output</h2>
+<textarea id="output" rows="4" readonly></textarea>
+
+<button id="lichessBtn" disabled>Open in Lichess</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
